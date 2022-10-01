@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_page">
+
+    <Button
+        android:id="@+id/tab_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/ic_menu_delete"
+        android:gravity="bottom|start"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tab_photo"/>
+
+    <Button
+        android:id="@+id/tab_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/ic_menu_camera"
+        android:layout_margin="5dp
+"
+        android:gravity="bottom|start"
+        app:layout_constraintBottom_toBottomOf="@+id/cn"
+        app:layout_constraintStart_toStartOf="@+id/cn"/>
+
+    <Button
+        android:id="@+id/tab_exit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?attr/actionModeCloseDrawable"
+        android:gravity="start|end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tab_edit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/ic_menu_edit"
+        android:gravity="bottom|start"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tab_delete" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="5dp"
+        android:background="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98">
+
+        <ImageView
+            android:id="@+id/edit_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/car_icon"
+
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_margin="10dp"
+            android:hint="Name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_color"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:hint="Color" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_dpl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autoLink="phone"
+            android:layout_margin="10dp"
+            android:hint="Destance Per Liter"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_desc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+
+            android:hint="Discreption"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
